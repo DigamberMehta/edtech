@@ -27,13 +27,13 @@ const StudentPortal = () => {
     totalPending: 15000
   };
 
-  const getScoreColor = (percentage: number) => {
+  const getScoreColor = (percentage) => {
     if (percentage >= 90) return 'text-green-600';
     if (percentage >= 75) return 'text-yellow-600';
     return 'text-red-600';
   };
 
-  const getRankColor = (rank: number) => {
+  const getRankColor = (rank) => {
     if (rank <= 3) return 'bg-yellow-100 text-yellow-800';
     if (rank <= 10) return 'bg-blue-100 text-blue-800';
     return 'bg-gray-100 text-gray-800';
@@ -187,7 +187,7 @@ const StudentPortal = () => {
                   <div>
                     <p className="font-medium text-green-900">January 2024</p>
                     <p className="text-sm text-green-700">
-                      Paid on {new Date(feeStatus.currentMonth.paidDate!).toLocaleDateString()}
+                      Paid on {new Date(feeStatus.currentMonth.paidDate).toLocaleDateString()}
                     </p>
                   </div>
                   <div className="text-right">

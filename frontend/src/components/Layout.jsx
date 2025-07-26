@@ -1,14 +1,8 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Header from "./Header";
+import Sidebar from "./Sidebar.jsx";
+import Header from "./Header.jsx";
 
-interface LayoutProps {
-  children: React.ReactNode;
-  userType: "tutor" | "student";
-  onLogout: () => void;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children, userType, onLogout }) => {
+const Layout = ({ children, userType, onLogout }) => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   return (

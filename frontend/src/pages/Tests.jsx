@@ -47,7 +47,7 @@ const Tests = () => {
     { name: 'Amit Kumar', batch: 'JEE Advanced - Maths', marks: 112, maxMarks: 120 },
   ];
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status) => {
     switch (status) {
       case 'Completed': return 'bg-green-100 text-green-800';
       case 'Upcoming': return 'bg-blue-100 text-blue-800';

@@ -1,12 +1,7 @@
-import React from 'react';
-import { Menu, Bell, LogOut } from 'lucide-react';
+import React from "react";
+import { Menu, Bell, LogOut } from "lucide-react";
 
-interface HeaderProps {
-  onMenuClick: () => void;
-  onLogout: () => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ onMenuClick, onLogout }) => {
+const Header = ({ onMenuClick, onLogout }) => {
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
@@ -21,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick, onLogout }) => {
           <button className="p-2 text-gray-400 hover:text-gray-500 hover:bg-gray-100 rounded-lg">
             <Bell className="h-5 w-5" />
           </button>
-          <button 
+          <button
             onClick={onLogout}
             className="flex items-center p-2 text-gray-400 hover:text-gray-500 hover:bg-gray-100 rounded-lg"
           >

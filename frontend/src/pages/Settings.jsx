@@ -156,13 +156,13 @@ const Settings = () => {
                     <div className="p-3 border border-gray-200 rounded-lg">
                       <h4 className="font-medium text-gray-900">Fee Reminder</h4>
                       <p className="text-sm text-gray-600 mt-1">
-                        "Dear {student_name}, your fee of ₹{amount} is due on {due_date}. Please pay to continue classes."
+                        "Dear [Student Name], your fee of ₹[Amount] is due on [Due Date]. Please pay to continue classes."
                       </p>
                     </div>
                     <div className="p-3 border border-gray-200 rounded-lg">
                       <h4 className="font-medium text-gray-900">Test Results</h4>
                       <p className="text-sm text-gray-600 mt-1">
-                        "Hi {student_name}, your {test_name} results are ready. You scored {marks}/{max_marks}. Keep it up!"
+                        "Hi [Student Name], your [Test Name] results are ready. You scored [Marks]/[Max Marks]. Keep it up!"
                       </p>
                     </div>
                   </div>

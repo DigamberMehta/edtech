@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { GraduationCap, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 
-interface LoginProps {
-  onLogin: (userType: 'tutor' | 'student') => void;
-}
-
-const Login: React.FC<LoginProps> = ({ onLogin }) => {
+const Login = ({ onLogin }) => {
   const [isLogin, setIsLogin] = useState(true);
-  const [userType, setUserType] = useState<'tutor' | 'student'>('tutor');
+  const [userType, setUserType] = useState('tutor');
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
@@ -16,12 +12,12 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     instituteName: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     onLogin(userType);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value

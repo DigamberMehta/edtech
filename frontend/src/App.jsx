@@ -13,9 +13,9 @@ import Settings from './pages/Settings';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = React.useState(false);
-  const [userType, setUserType] = React.useState<'tutor' | 'student'>('tutor');
+  const [userType, setUserType] = React.useState('tutor');
 
-  const handleLogin = (type: 'tutor' | 'student') => {
+  const handleLogin = (type) => {
     setIsAuthenticated(true);
     setUserType(type);
   };
